@@ -1,0 +1,144 @@
+:root {
+    --primary-color: #4834d4;
+    --secondary-color: #686de0;
+    --bg-gradient: linear-gradient(135deg, #4834d4 0%, #686de0 100%);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.tab.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.content-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.chat-container {
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    padding: 10px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.chat-message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.chat-message.sent {
+    margin-left: auto;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.chat-message.received {
+    margin-right: auto;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.message-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.message-list {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.conversation-item {
+    padding: 10px;
+    margin: 5px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.conversation-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+input, textarea, select, button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input, textarea {
+    flex: 1;
+}
+
+button {
+    background: var(--secondary-color);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: var(--primary-color);
+}
+
+.message-composer {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.message-composer select,
+.message-composer textarea {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.message-composer textarea {
+    height: 100px;
+    resize: vertical;
+}

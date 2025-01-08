@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réinitialisation mot de passe</title>
+    <link rel="stylesheet" href="reinitialisation_mot_de_passe.css">
+    <script src="reinitialisation_mot_de_passe.js"></script>
+</head>
+<body>
+    <div class="alert" id="successAlert">Mot de passe réinitialisé avec succès</div>
+    
+    <div class="container">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        
+        <div class="reset-form">
+            <h1>Réinitialisation du mot de passe</h1>
+            <form id="resetForm">
+                <div class="form-group">
+                    <label>Nom d'utilisateur</label>
+                    <input type="text" id="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Nouveau mot de passe</label>
+                    <input type="password" id="newPassword" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Confirmation du mot de passe</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+
+                <button type="submit" class="confirm-btn">Confirmer</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

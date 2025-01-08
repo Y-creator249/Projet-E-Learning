@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enseignant</title>
+    <link rel="stylesheet" href="enseignant.css">
+    <script src="enseignant.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="user-info">
+            <h3>Enseignant</h3>
+            <p id="teacherId">ID: ENS001</p>
+        </div>
+        <nav>
+            <a href="#courses" class="nav-item active" onclick="showSection('courses')">Mes Cours</a>
+            <a href="#chapters" class="nav-item" onclick="showSection('chapters')">Chapitres</a>
+            <a href="#content" class="nav-item" onclick="showSection('content')">Contenu</a>
+            <a href="#quiz" class="nav-item" onclick="showSection('quiz')">Quiz</a>
+            <a href="#assignments" class="nav-item" onclick="showSection('assignments')">Devoirs</a>
+            <a href="#grades" class="nav-item" onclick="showSection('grades')">Notes</a>
+        </nav>
+        <button class="logout-btn" onclick="logout()">Déconnexion</button>
+    </div>
+
+    <div class="main-content">
+        <!-- Section Cours -->
+        <section id="courses" class="section active">
+            <h2>Gestion des Cours</h2>
+            <div class="card">
+                <h3>Créer un nouveau cours</h3>
+                <div class="form-group">
+                    <input type="text" id="courseName" placeholder="Nom du cours">
+                </div>
+                <div class="form-group">
+                    <textarea id="courseDescription" placeholder="Description du cours"></textarea>
+                </div>
+                <button onclick="createCourse()">Créer le cours</button>
+            </div>
+            <div class="course-list" id="courseList">
+                <!-- Liste des cours générée dynamiquement -->
+            </div>
+        </section>
+
+        <!-- Section Chapitres -->
+        <section id="chapters" class="section">
+            <h2>Organisation des Chapitres</h2>
+            <div class="form-group">
+                <select id="courseSelect">
+                    <option value="">Sélectionner un cours</option>
+                </select>
+            </div>
+            <div class="card">
+                <h3>Ajouter un chapitre</h3>
+                <div class="form-group">
+                    <input type="text" id="chapterTitle" placeholder="Titre du chapitre">
+                </div>
+                <button onclick="addChapter()">Ajouter le chapitre</button>
+            </div>
+            <div id="chaptersList"></div>
+        </section>
+
+        <!-- Section Contenu -->
+        <section id="content" class="section">
+            <h2>Contenu du Cours</h2>
+            <div class="form-group">
+                <select id="chapterSelect">
+                    <option value="">Sélectionner un chapitre</option>
+                </select>
+            </div>
+            <div class="card">
+                <h3>Ajouter du contenu</h3>
+                <div class="form-group">
+                    <textarea id="contentText" placeholder="Contenu du cours"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="file" id="contentFile">
+                </div>
+                <button onclick="addContent()">Ajouter le contenu</button>
+            </div>
+        </section>
+
+        <!-- Section Quiz -->
+        <section id="quiz" class="section">
+            <h2>Création de Quiz</h2>
+            <div class="card">
+                <h3>Nouveau Quiz</h3>
+                <div class="form-group">
+                    <input type="text" id="quizTitle" placeholder="Titre du quiz">
+                </div>
+                <div id="questionsList">
+                    <!-- Questions générées dynamiquement -->
+                </div>
+                <button onclick="addQuestion()">Ajouter une question</button>
+                <button onclick="saveQuiz()">Enregistrer le quiz</button>
+            </div>
+            <div class="quiz-list" id="quizList"></div>
+        </section>
+
+        <!-- Section Devoirs -->
+        <section id="assignments" class="section">
+            <h2>Gestion des Devoirs</h2>
+            <div class="card">
+                <h3>Nouveau Devoir</h3>
+                <div class="form-group">
+                    <input type="text" id="assignmentTitle" placeholder="Titre du devoir">
+                </div>
+                <div class="form-group">
+                    <textarea id="assignmentDescription" placeholder="Description du devoir"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="assignmentDueDate">
+                </div>
+                <button onclick="createAssignment()">Créer le devoir</button>
+            </div>
+            <div class="assignment-list" id="assignmentList"></div>
+        </section>
+
+        <!-- Section Notes -->
+        <section id="grades" class="section">
+            <h2>Gestion des Notes</h2>
+            <div class="form-group">
+                <select id="gradeType">
+                    <option value="quiz">Quiz</option>
+                    <option value="assignment">Devoirs</option>
+                </select>
+            </div>
+            <table class="grades-table">
+                <thead>
+                    <tr>
+                        <th>Étudiant</th>
+                        <th>Activité</th>
+                        <th>Note</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="gradesTableBody">
+                    <!-- Notes générées dynamiquement -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <a href="communication.html" class="communication-btn">Communication</a>
+</body>
+</html>

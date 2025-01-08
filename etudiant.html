@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etudiant</title>
+    <link rel="stylesheet" href="etudiant.css">
+    <script src="etudiant.js"></script>
+</head>
+<body>
+    <div class="topbar">
+        <h2 style="color: white;">E-Learning Platform</h2>
+        <div style="display: flex; gap: 20px;">
+            <button class="communication-button">
+                Communications
+                <span class="notification-badge">3</span>
+            </button>
+            <button class="button secondary-button">Déconnexion</button>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="welcome-section">
+            <h2>Bienvenue</h2>
+        </div>
+
+        <div class="dashboard-grid">
+            <!-- Cours -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Mes Cours</h3>
+                    <button class="button primary-button">Voir tout</button>
+                </div>
+                <ul class="item-list">
+                    <li class="item">
+                        <div>Mathématiques Avancées</div>
+                        <div class="progress-bar">
+                            <div class="progress-value" style="width: 75%"></div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div>Programmation Web</div>
+                        <div class="progress-bar">
+                            <div class="progress-value" style="width: 45%"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Quiz -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Quiz</h3>
+                    <button class="button primary-button">Voir tout</button>
+                </div>
+                <ul class="item-list">
+                    <li class="item">
+                        Quiz HTML/CSS
+                        <span class="status status-pending">À faire</span>
+                    </li>
+                    <li class="item">
+                        Quiz JavaScript
+                        <span class="status status-completed">Terminé</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Devoirs -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Devoirs</h3>
+                    <button class="button primary-button">Voir tout</button>
+                </div>
+                <ul class="item-list">
+                    <li class="item">
+                        Projet Final Web
+                        <span class="status status-pending">À rendre</span>
+                    </li>
+                    <li class="item">
+                        TP Base de données
+                        <span class="status status-completed">Soumis</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Notes -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Mes Notes</h3>
+                    <button class="button primary-button">Voir tout</button>
+                </div>
+                <ul class="item-list">
+                    <li class="item">HTML/CSS <span style="float: right">18/20</span></li>
+                    <li class="item">JavaScript <span style="float: right">16/20</span></li>
+                    <li class="item">PHP <span style="float: right">15/20</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

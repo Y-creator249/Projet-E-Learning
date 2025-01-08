@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #3a0f82 0%, #1e065c 100%);
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    background: linear-gradient(135deg, #4e37bc 0%, #2b1887 100%);
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.bubble-1 {
+    width: 100px;
+    height: 100px;
+    top: 20px;
+    left: 20px;
+}
+
+.bubble-2 {
+    width: 80px;
+    height: 80px;
+    bottom: 40px;
+    right: 60px;
+}
+
+.bubble-3 {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    right: 30px;
+}
+
+.login-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23000' viewBox='0 0 16 16'%3E%3Cpath d='M8 12L2 6h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+.error-message {
+    color: #ff4444;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    display: none;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #3a0f82;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background: #f0f0f0;
+}
+
+.create-account {
+    color: white;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.create-account a {
+    color: white;
+    text-decoration: underline;
+}
+
+.login-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.forgot-password {
+    color: white;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.button-container {
+    width: 48%;
+}
+
+.login-btn {
+    width: 100%;
+    margin-top: 0;
+}

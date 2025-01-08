@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #3a0f82 0%, #1e065c 100%);
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    background: linear-gradient(135deg, #4e37bc 0%, #2b1887 100%);
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.bubble-1 {
+    width: 100px;
+    height: 100px;
+    top: 20px;
+    left: 20px;
+}
+
+.bubble-2 {
+    width: 80px;
+    height: 80px;
+    bottom: 40px;
+    right: 60px;
+}
+
+.bubble-3 {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    right: 30px;
+}
+
+.reset-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    font-size: 14px;
+}
+
+.confirm-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #3a0f82;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.confirm-btn:hover {
+    background: #f0f0f0;
+}
+
+.alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    border-radius: 25px;
+    background-color: #4CAF50;
+    color: white;
+    display: none;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        top: -100px;
+        opacity: 0;
+    }
+    to {
+        top: 20px;
+        opacity: 1;
+    }
+}

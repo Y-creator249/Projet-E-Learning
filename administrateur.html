@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrateur</title>
+    <link rel="stylesheet" href="administrateur.css">
+    <script src="administrateur.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="user-info">
+            <h3>Admin</h3>
+            <p id="adminId">ID: ADM001</p>
+        </div>
+        <nav>
+            <a href="#users" class="nav-item active" onclick="showSection('users')">Gestion Utilisateurs</a>
+            <a href="#roles" class="nav-item" onclick="showSection('roles')">Gestion des Rôles</a>
+            <a href="#supervision" class="nav-item" onclick="showSection('supervision')">Supervision</a>
+            <a href="#profiles" class="nav-item" onclick="showSection('profiles')">Gestion des Profils</a>
+        </nav>
+        <button class="logout-btn" onclick="logout()">Déconnexion</button>
+    </div>
+
+    <div class="main-content">
+        <section id="users" class="section active">
+            <h2>Gestion des Utilisateurs</h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <input type="text" id="newUsername" placeholder="Nom d'utilisateur">
+                </div>
+                <div class="form-group">
+                    <input type="password" id="newPassword" placeholder="Mot de passe">
+                </div>
+                <div class="form-group">
+                    <select id="newRole">
+                        <option value="">Sélectionner un rôle</option>
+                        <option value="admin">Administrateur</option>
+                        <option value="comptable">Comptable</option>
+                        <option value="enseignant">Enseignant</option>
+                        <option value="etudiant">Étudiant</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button onclick="addNewUser()">Ajouter Utilisateur</button>
+                </div>
+            </div>
+            <table id="usersTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Utilisateur</th>
+                        <th>Rôle</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rempli dynamiquement -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="roles" class="section">
+            <h2>Gestion des Rôles</h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <select id="roleFilter">
+                        <option value="">Tous les rôles</option>
+                        <option value="admin">Administrateur</option>
+                        <option value="comptable">Comptable</option>
+                        <option value="enseignant">Enseignant</option>
+                        <option value="etudiant">Étudiant</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button onclick="filterByRole()">Filtrer</button>
+                </div>
+            </div>
+            <table id="rolesTable">
+                <thead>
+                    <tr>
+                        <th>Rôle</th>
+                        <th>Nombre d'utilisateurs</th>
+                        <th>Permissions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rempli dynamiquement -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="supervision" class="section">
+            <h2>Supervision de la Plateforme</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 id="totalUsers">0</h3>
+                    <p>Utilisateurs Total</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="activeUsers">0</h3>
+                    <p>Utilisateurs Actifs</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="totalRoles">4</h3>
+                    <p>Rôles Disponibles</p>
+                </div>
+                <div class="stat-card">
+                    <h3>100%</h3>
+                    <p>Disponibilité System</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="profiles" class="section">
+            <h2>Gestion des Profils</h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <select id="profileType">
+                        <option value="">Sélectionner un type de profil</option>
+                        <option value="admin">Administrateur</option>
+                        <option value="comptable">Comptable</option>
+                        <option value="enseignant">Enseignant</option>
+                        <option value="etudiant">Étudiant</option>
+                    </select>
+                </div>
+            </div>
+            <table id="profilesTable">
+                <thead>
+                    <tr>
+                        <th>Type de Profil</th>
+                        <th>Permissions</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rempli dynamiquement -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

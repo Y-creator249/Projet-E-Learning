@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication</title>
+    <link rel="stylesheet" href="communication.css">
+    <script src="communication.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" data-tab="chat">Chat</button>
+            <button class="tab" data-tab="messages">Messages</button>
+        </div>
+
+        <div id="chat" class="content-section active">
+            <h2>Chat en direct</h2>
+            <div class="chat-container" id="chatMessages"></div>
+            <div class="message-input">
+                <input type="text" id="chatInput" placeholder="Votre message...">
+                <button id="sendChatButton">Envoyer</button>
+            </div>
+        </div>
+
+        <div id="messages" class="content-section">
+            <h2>Messages</h2>
+            <div class="message-list">
+                <button id="composeMessageButton">Nouveau message</button>
+                <div id="conversationList"></div>
+                <div id="conversationContainer"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
